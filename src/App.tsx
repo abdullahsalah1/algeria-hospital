@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Globe2, Phone, Mail, MapPin } from 'lucide-react';
+import Background from 'src/Background.jpg'; // Update path accordingly
+import Logo from 'src/logo.jpg'; // Update path accordingly
 
 function App() {
   const [language, setLanguage] = useState<'ar' | 'en'>('ar');
@@ -45,7 +47,7 @@ function App() {
       {/* Background Image */}
       <div 
         className="fixed inset-0 bg-cover bg-center opacity-20 pointer-events-none"
-        style={{ backgroundImage: 'url(src/Background.jpg)' }}
+        style={{ backgroundImage: 'url(${Background})' }}
       />
 
       {/* Main Content */}
@@ -54,7 +56,7 @@ function App() {
         <header className="bg-white shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <img 
-              src="src/logo.jpg" 
+              src={Logo} 
               alt="Algeria Specialized Hospital" 
               className="h-16"
             />
