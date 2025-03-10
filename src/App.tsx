@@ -16,7 +16,7 @@ function App() {
       stayTuned: 'نحن نعمل بجد لنقدم لكم شيئًا مذهلاً.. ترقبوا التحديثات!',
       contactInfo: 'معلومات التواصل',
       phone: 'الهاتف',
-      phoneNumbers: ['01406555 - 01405333', '780405333-780406555'],
+      phoneNumbers: ['01406555 - 01405333', '780405333 - 780406555'],
       email: 'الإيميل',
       emailAddress: 'info@algeria-hospitsal.com',
       address: 'العنوان',
@@ -29,7 +29,7 @@ function App() {
       stayTuned: "We're working hard to bring you something amazing.. Stay tuned for updates!",
       contactInfo: 'Contact Information',
       phone: 'Phone',
-      phoneNumbers: ['01406555 - 01405333', '780405333-780406555'],
+      phoneNumbers: ['01406555 - 01405333', '780405333 - 780406555'],
       email: 'Email',
       emailAddress: 'info@algeria-hospitsal.com',
       address: 'Address',
@@ -51,7 +51,7 @@ function App() {
       {/* Main Content */}
       <div className="relative z-10">
         {/* Header */}
-        <header className="bg-white shadow-md" dir="rtl">
+        <header className="bg-white shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <img 
               src="src/logo.jpg" 
