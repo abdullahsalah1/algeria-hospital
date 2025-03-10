@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Globe2, Phone, Mail, MapPin } from 'lucide-react';
-import Background from 'src/Background.jpg'; // Update path accordingly
-import Logo from 'src/logo.jpg'; // Update path accordingly
+import Background from './Background.jpg';
+import Logo from './Logo.jpg';
 
 function App() {
   const [language, setLanguage] = useState<'ar' | 'en'>('ar');
@@ -13,7 +13,7 @@ function App() {
 
   const content = {
     ar: {
-      comingSoon: ' 1 قريباً',
+      comingSoon: 'قريباً',
       underConstruction: 'الموقع قيد الإنشاء',
       stayTuned: 'نحن نعمل بجد لنقدم لكم شيئًا مذهلاً.. ترقبوا التحديثات!',
       contactInfo: 'معلومات التواصل',
@@ -47,7 +47,7 @@ function App() {
       {/* Background Image */}
       <div 
         className="fixed inset-0 bg-cover bg-center opacity-20 pointer-events-none"
-        style={{ backgroundImage: 'url(${Background})' }}
+        style={{ backgroundImage: `url(${Background})` }}
       />
 
       {/* Main Content */}
@@ -56,7 +56,7 @@ function App() {
         <header className="bg-white shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <img 
-              src={Logo} 
+              src={Logo}
               alt="Algeria Specialized Hospital" 
               className="h-16"
             />
