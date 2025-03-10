@@ -13,7 +13,7 @@ function App() {
 
   const content = {
     ar: {
-      comingSoon: 'قريباً',
+      comingSoon: ' 1 قريباً',
       underConstruction: 'الموقع قيد الإنشاء',
       stayTuned: 'نحن نعمل بجد لنقدم لكم شيئًا مذهلاً.. ترقبوا التحديثات!',
       contactInfo: 'معلومات التواصل',
