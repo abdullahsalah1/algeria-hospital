@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Arabic font for Arabic language */
+  html[dir="rtl"] {
+    font-family: "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+  }
+}
