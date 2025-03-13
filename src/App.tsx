@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Globe2, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import Background from './Background.jpg';
+import Logo from './Logo.jpg';
 
 function App() {
   const [language, setLanguage] = useState<'ar' | 'en'>('ar');
 
+  useEffect(() => {
+    document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
   const content = {
     ar: {
       comingSoon: 'قريباً',
       underConstruction: 'الموقع قيد الإنشاء',
-      stayTuned: 'نحن نعمل بجد لنقدم لك شيئًا مذهلاً. ترقب التحديثات!',
+      stayTuned: 'نحن نعمل بجد لنقدم لكم شيئًا مذهلاً .. ترقبوا التحديثات!',
       contactInfo: 'معلومات التواصل',
       phone: 'الهاتف',
       phoneNumbers: [
@@ -25,7 +31,7 @@ function App() {
     en: {
       comingSoon: 'Coming Soon',
       underConstruction: 'The site is under construction',
-      stayTuned: "We're working hard to bring you something amazing. Stay tuned for updates!",
+      stayTuned: "We're working hard to bring you something amazing .. Stay tuned for updates!",
       contactInfo: 'Contact Information',
       phone: 'Phone',
       phoneNumbers: [
@@ -42,10 +48,10 @@ function App() {
   };
 
   const socialMedia = [
-    { icon: Facebook, link: 'https://facebook.com/algeriaspecializedhospital', color: 'hover:text-blue-600' },
-    { icon: Instagram, link: 'https://instagram.com/algeriaspecializedhospital', color: 'hover:text-pink-600' },
-    { icon: Twitter, link: 'https://twitter.com/algeriahosp', color: 'hover:text-blue-400' },
-    { icon: Youtube, link: 'https://youtube.com/algeriaspecializedhospital', color: 'hover:text-red-600' }
+    { icon: Facebook, link: 'https://www.facebook.com/p/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A-100093225066936/', color: 'hover:text-blue-600' },
+    { icon: Instagram, link: '#', color: 'hover:text-pink-600' },
+    { icon: Twitter, link: '#', color: 'hover:text-blue-400' },
+    { icon: Youtube, link: '#', color: 'hover:text-red-600' }
   ];
 
   const currentContent = content[language];
@@ -60,7 +66,7 @@ function App() {
 
   const handleAddressClick = () => {
     // Coordinates for Sana'a, Yemen near the specified location
-    window.open('https://www.google.com/maps?q=15.3544,44.2075', '_blank');
+    window.open('https://maps.app.goo.gl/F4Q3fDEuxoavkotx9', '_blank');
   };
 
   return (
@@ -68,9 +74,7 @@ function App() {
       {/* Background Image */}
       <div 
         className="fixed inset-0 bg-cover bg-center opacity-36 pointer-events-none"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80)'
-        }}
+        style={{ backgroundImage: `url(${Background})`, opacity: 0.36}}
       />
 
       {/* Main Content */}
@@ -79,7 +83,7 @@ function App() {
         <header className="bg-white shadow-md">
           <div className="container mx-auto px-4 py-2 flex justify-between items-center">
             <img 
-              src="https://raw.githubusercontent.com/stackblitz/stackblitz-webcontainer-core-internal/main/turbo/examples/basic/apps/web/public/logo.png" 
+              src={Logo}
               alt="Algeria Specialized Hospital" 
               className="h-12"
             />
