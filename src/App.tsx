@@ -165,7 +165,7 @@ function App() {
             {/* Social Media Links */}
             <div className="pt-6">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">{currentContent.followUs}</h4>
-              <div className="flex justify-center gap-6">
+              <div className="flex justify-center gap-6" style={{direction:'ltr'}}>
                 {socialMedia.map((social, index) => {
                   const Icon = social.icon;
                   return (
